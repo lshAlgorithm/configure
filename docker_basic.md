@@ -1,5 +1,5 @@
 # Fedora docker download
-```css
+```powershell
 docker pull fedora # 从docker hub拉取fedora镜像
 docker container run -it -v /Users/xxxx/yourFilePath:/csapp --name=csapp_env fedora /bin/bash # /Users/xxxx/yourFilePath 请替换成你自己想要进行同步的目录 :/csapp 替换成你自己想要命名的目录
 
