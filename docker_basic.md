@@ -12,4 +12,10 @@ nameserver 8.8.8.8 # 更改为您想要使用的DNS服务器的IP地址, 此为�
 :wq
 
 ping google.com # get access to internet
+
+# ----------open the docker after exit------------------
+docker ps -a # get the overview of the container already had
+docker start container_id # type the id 启动容器
+docker exec -it container_id /bin/bash # 执行容器
+
 ```
