@@ -72,3 +72,30 @@ ssh -T git@github.com # visit to check
    systemctl set-default graphical.target
    nvidia-smi #check it!!!
    ```
+
+# VS code
+* [Download vscode](https://code.visualstudio.com/docs/setup/linux)
+```powershell
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf check-update
+sudo dnf install code # or code-insiders
+```
+* have g++ gdb etc.
+```powershell
+sudo dnf gcc-c++ cmake gdb
+```
+* Fonts
+   - [JetBrain Mono](https://www.jetbrains.com/lp/mono/#how-to-install)
+   - unzip the zip
+   - `sudo mv ./JetBrainsMono-2.304/* /usr/share/fonts`
+   - restart IDE
+   - modify the font size and allow font ligatures in json
+* code-snippets
+  - Preference -> Configure user snippets -> Global
+  - did as comments say
+  
+
+# Docker
+download and refer to [it](https://docs.docker.com/engine/install/fedora/)
+more it on `./docker_basic.md`
