@@ -99,3 +99,53 @@ sudo dnf gcc-c++ cmake gdb
 # Docker
 download and refer to [it](https://docs.docker.com/engine/install/fedora/)
 more it on `./docker_basic.md`
+
+# Anaconda
+[Details](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
+```powershell
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+
+~/miniconda3/bin/conda init bash
+~/miniconda3/bin/conda init zsh
+```
+
+Add the conda to path
+```powershell
+# get the path of miniconda3/bin
+# this time is: /home/brianlee/miniconda3/bin
+vim ~/.bashrc 
+export PATH = "/home/brianlee/miniconda3/bin:$PATH" # add it to the end of the file
+source ~/.bashrc 
+```
+
+## About mirror
+[Details](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
+Add mirror
+```powershell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+```
+
+Delete mirror
+```powershell
+conda config --remove channels 'https://github.com/mstamy2/PyPDF2/'
+```
+
+# CUDA
+* check the version of your cuda using `nvidia-smi`
+* install through the command in pytorch official website, **match the cuda version**
+
+# Extension
+* hide the top-bar: [gnome extension](https://extensions.gnome.org/extension/545/hide-top-bar/)
+* LibreOffice: `sudo dnf install LibreOffice`, to have ps-like, word-like, excel-like software
+* Stacer: `sudo dnf install stacer`, to have monitor on your device
+
+
