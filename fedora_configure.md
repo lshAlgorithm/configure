@@ -31,3 +31,44 @@ vim /Users/<your name>/.ssh/id_rsa.pub
 # ADD new ssh key
 ssh -T git@github.com # visit to check
 ```
+
+# Nvidia driver
+[Details](https://zhuanlan.zhihu.com/p/627426276?utm_campaign=&utm_medium=social&utm_psn=1769327088858083328&utm_source=qq)
+1. download newest .run [officially](https://www.nvidia.com/download/index.aspx)
+     > original hp laptop is Geforce MX570
+2. close graphical operations
+   ```powershell
+   init 3 # enter the non-graphical view
+   systemctl get-default
+   service graphical.target stop
+   systemctl set-default multi-user.target
+   ```
+3. ban nouveau
+   ```powershell
+   # 在/etc/modprobe.d文件夹中新建nouveau-blacklist.conf文件，写入
+   blacklist nouveau 
+   options nouveau modeset=0
+
+   #在/etc/default/grub文件的GRUB_CMDLINE_LINUX参数中添加：
+   rd.driver.blacklist=nouveau
+
+   grub2-mkconfig -o /boot/grub2/grub.cfg
+   reboot
+   ```
+4. download driver
+   ```powershell
+   lsmod | grep nouveau    # 没有输出才是真禁用了
+   dnf install binutils make gcc
+
+
+   #涉及到kernel-headers和kernel-devel两个包的版本要与内核版本一致
+   uname -r #查看内核版本
+   yum info kernel-devel kernel-headers #查看kernel-headers和kernel-devel的版本
+   dnf install xx # install what is not coincide
+   
+   cd <your-dictionary>
+   sh NVIDIA-Linux-x86_64-xxx.xxx.xx.run
+
+   systemctl set-default graphical.target
+   nvidia-smi #check it!!!
+   ```
