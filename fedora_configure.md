@@ -101,7 +101,8 @@ download and refer to [it](https://docs.docker.com/engine/install/fedora/)
 more it on `./docker_basic.md`
 
 # Anaconda
-[Details](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
+* Installation [Details](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
+
 ```powershell
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
@@ -112,14 +113,22 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init zsh
 ```
 
-Add the conda to path
+* Add the conda to path
 ```powershell
 # get the path of miniconda3/bin
 # this time is: /home/brianlee/miniconda3/bin
+
+# ------------!the following turns out to be not function well!!-----------------
 vim ~/.bashrc 
 export PATH = "/home/brianlee/miniconda3/bin:$PATH" # add it to the end of the file
 source ~/.bashrc 
+
+# ------------!instead! use as follows!---------------
+source ~/.bashrc
+export PATH=$PATH:/home/brianlee/miniconda3/bin # type in command line!
 ```
+
+* Remove the env:` conda remove --name ENV_NAME --all`
 
 ## About mirror
 [Details](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
@@ -142,6 +151,7 @@ conda config --remove channels 'https://github.com/mstamy2/PyPDF2/'
 # CUDA
 * check the version of your cuda using `nvidia-smi`
 * install through the command in pytorch official website, **match the cuda version**
+ > Mine is `conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia`
 
 # Extension
 * hide the top-bar: [gnome extension](https://extensions.gnome.org/extension/545/hide-top-bar/)
