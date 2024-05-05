@@ -19,6 +19,7 @@ sudo dnf install v2raya #download v2rayA
 sudo systemctl start v2raya.service # start the v2ray
 sudo systemctl enable v2raya.service # start it whenever boost
 ```
+Then, start your proxy in your Internet Setting.
 
 # Github
 [Details](https://blog.csdn.net/AngelDg/article/details/106629442)
@@ -152,6 +153,15 @@ conda config --remove channels 'https://github.com/mstamy2/PyPDF2/'
 * check the version of your cuda using `nvidia-smi`
 * install through the command in pytorch official website, **match the cuda version**
  > Mine is `conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia`
+* To test cuda, use the following
+```python
+>>> import torch
+>>> torch.cuda.is_available()
+True
+>>> torch.tensor([1.0, 2.0]).cuda()
+tensor([1., 2.], device='cuda:0')
+>>> exit()
+```
 
 # Extension
 * hide the top-bar: [gnome extension](https://extensions.gnome.org/extension/545/hide-top-bar/)
