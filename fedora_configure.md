@@ -91,7 +91,7 @@ sudo dnf gcc-c++ cmake gdb
    - unzip the zip
    - `sudo mv ./JetBrainsMono-2.304/ttf /usr/share/fonts`
     > you should get the font here as follows
-    ![all text]()
+    ![all text](https://github.com/lshAlgorithm/configure/blob/main/photos/Screenshot%20from%202024-05-19%2018-45-43.png)
    - restart IDE
    - modify the font size and allow font ligatures in json
 * code-snippets
