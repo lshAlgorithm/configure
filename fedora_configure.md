@@ -89,7 +89,9 @@ sudo dnf gcc-c++ cmake gdb
 * Fonts
    - [JetBrain Mono](https://www.jetbrains.com/lp/mono/#how-to-install)
    - unzip the zip
-   - `sudo mv ./JetBrainsMono-2.304/* /usr/share/fonts`
+   - `sudo mv ./JetBrainsMono-2.304/ttf /usr/share/fonts`
+    > you should get the font here as follows
+    ![all text]()
    - restart IDE
    - modify the font size and allow font ligatures in json
 * code-snippets
