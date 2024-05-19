@@ -98,6 +98,35 @@ sudo dnf gcc-c++ cmake gdb
   - Preference -> Configure user snippets -> Global
   - did as comments say
   
+# Latex
+## Download
+  [refer](https://zhuanlan.zhihu.com/p/136209984)
+* download `ios` in [tuna](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/)
+    > a thousand years later...
+* mount the ios
+```powershell
+sudo mount -o loop texlive202x.iso /mnt 
+sudo dnf install perl-Tk # add a tool
+
+cd /mnt
+sudo ./install-tl -no_gui # fedora have no gui
+# do as it says, Commonly 'I' is enough
+```
+* add env path
+```powershell
+sudo gedit ~/.bashrc
+# the following may differ, do as the texlive downloading app says
+export PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH
+
+source /etc/profile
+```
+## vscode configuration
+[refer](
+https://zhuanlan.zhihu.com/p/166523064)
+> when testing the Chinese, use `\documentclass[UTF8,11pt,a4paper]{ctexart}%UTF-8编码，文字大小11，纸张类型A4` instead of the documentclass
+
 
 # Docker
 download and refer to [it](https://docs.docker.com/engine/install/fedora/)
