@@ -18,5 +18,22 @@ docker ps -a # get the overview of the container already had
 docker start container_id # type the id 启动容器
 docker exec -it container_id /bin/bash # 执行容器
 
+docker stop [container ID]
+
+docker rm [container ID]
+docker rmi [image ID] # use `docker images` to check the imageID
 ```
 [reference](https://zhuanlan.zhihu.com/p/339047608)
+
+## Basic operations
+```powershell
+echo  "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free" >/etc/apt/sources.list
+echo  "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free" >>/etc/apt/sources.list
+echo  "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free" >>/etc/apt/sources.list
+echo  "deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free" >>/etc/apt/sources.list    
+```
+then use apt-get
+```powershell
+apt-get update -y
+apt-get install -y iputils-ping
+```
