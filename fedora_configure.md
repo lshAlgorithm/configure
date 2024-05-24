@@ -97,6 +97,7 @@ sudo dnf gcc-c++ cmake gdb
 * code-snippets
   - Preference -> Configure user snippets -> Global
   - did as comments say
+> you may need to `fc-cache -f -v` after boot
   
 # Latex
 ## Download
