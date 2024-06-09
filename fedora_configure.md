@@ -32,6 +32,13 @@ vim /Users/<your name>/.ssh/id_rsa.pub
 # ADD new ssh key
 ssh -T git@github.com # visit to check
 ```
+## For large files
+[details](https://git-lfs.com/)
+> this is only for one .git, not global
+```powershell
+dnf install lfs
+```
+then refer to the details link
 
 # Nvidia driver
 [Details](https://zhuanlan.zhihu.com/p/627426276?utm_campaign=&utm_medium=social&utm_psn=1769327088858083328&utm_source=qq)
