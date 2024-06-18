@@ -4,6 +4,11 @@ docker pull fedora # 从docker hub拉取fedora镜像
 docker container run -it -v /Users/xxxx/yourFilePath:/csapp --name=csapp_env fedora /bin/bash # /Users/xxxx/yourFilePath 请替换成你自己想要进行同步的目录 :/csapp 替换成你自己想要命名的目录
 
 # ----------automatically get into the docker---------------
+```
+* Connect to the network
+> DONT USE NET ON CAMPUS
+1. method1: if you have vi
+```powershell
 vi /etc/resolv.conf #
 
 nameserver 8.8.8.8 # 更改为您想要使用的DNS服务器的IP地址, 此为谷歌公共dns服务器ip
@@ -12,7 +17,16 @@ nameserver 8.8.8.8 # 更改为您想要使用的DNS服务器的IP地址, 此为�
 :wq
 
 ping google.com # get access to internet
+```
+2. method2: with sed (or echo)
+```powershell
+sed "1i nameserver 8.8.8.8" /etc/resolv.conf
 
+#referred the follow
+sed "15i avatar" Makefile.txt # add 'avatar' in the 15th line in Makefile.txt
+```
+* Basic operation outside container
+```powershell
 # ----------open the docker after exit------------------
 docker ps -a # get the overview of the container already had
 docker start container_id # type the id 启动容器
