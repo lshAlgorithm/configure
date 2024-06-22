@@ -9,6 +9,7 @@ dnf install virt-manager
 Then, see the reference set forth
 
 # Clone VM and ssh through hostname
+CHECK if port22 is open using `sudo ss -tulpn | grep :22` first, or `sudo service sshd start`
 > To form a group
 1. clone the VM in UI
 2. change the hostname
@@ -30,3 +31,6 @@ cd /etc/hosts
 [ip] [hostname] # e.g. 192.168.1.101 debian-1
 ```
 4. Then you can `ssh [hostname]` to connect to `[username]@[hostname]`
+5. [More] About firewall
+   > mostly use firewalld or iptable
+   >> command about `firewalld` [refer](https://www.jianshu.com/p/e0fdecfcee4b)
