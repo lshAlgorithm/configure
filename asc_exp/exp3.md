@@ -46,3 +46,8 @@ Filesystem                  1K-blocks    Used Available Use% Mounted on
 2. check the block devices(storage devices like HDD included) with `lsblk`, then you can find out that there are something not in use
 3. 将新分配的存储空间创建物理卷, [refer](https://blog.csdn.net/weixin_49042937/article/details/116231803)中第一部分，then you can check through `lsblk`
 4. 利用vgextend命令将新的物理卷（/dev/[new_name]）加入到卷组中, [refer](https://www.cnblogs.com/stragon/p/5806388.html) in the ending part
+
+# Dir
+1. cmake [knowledge](https://cloud.tencent.com/developer/article/1635620)
+2. `scp` command [details](https://www.xiexianbin.cn/linux/ssh/scp/index.html)
+3. solve auto sleep of remote server, [refer](https://blog.csdn.net/bandaoyu/article/details/116999236)

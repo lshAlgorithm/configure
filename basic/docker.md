@@ -39,6 +39,7 @@ docker rmi [image ID] # use `docker images` to check the imageID
 ```
 [reference](https://zhuanlan.zhihu.com/p/339047608)
 
+
 ## Basic operations
 ```powershell
 echo  "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free" >/etc/apt/sources.list
@@ -51,3 +52,21 @@ then use apt-get
 apt-get update -y
 apt-get install -y iputils-ping
 ```
+
+## Common pros
+1. Error response from daemon: pull access denied for your_username/your_repository
+> docker login -u [your_username_in_hub]
+2. Temporary failure resolving 'mirrors.tuna.tsinghua.edu.cn'
+> `sudo vim /etc/docker/daemon.json`
+> Add the following:
+> ```powershell
+> {
+>  "registry-mirrors": ["https://mirrors.tuna.tsinghua.edu.cn"],
+>  "dns":["114.114.114.114","8.8.8.8"],
+>  "iptables": true
+> }
+> ```
+> restart the service: `systemctl daemon-reload systemctl restart docker`
+3. if the mounted folder get `Permission denied` in docker root
+> run the docker like `docker run -i -t -v /soft:/soft --privileged=true 637fe9ea94f0 /bin/bash`
+> `--privileged=true` matters
