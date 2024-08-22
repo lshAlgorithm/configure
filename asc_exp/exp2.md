@@ -1,2 +1,2 @@
 # Outcomes
-![](/home/brianlee/Documents/git/configure/photos/exp02.png)
+![](https://github.com/lshAlgorithm/configure/blob/main/photos/exp02.png)
