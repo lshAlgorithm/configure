@@ -113,3 +113,9 @@ sudo btrfs subvolume delete /path/to/snapshot
 
 ### 5. **总结**
 Btrfs 的快照功能为数据备份和恢复提供了强大的支持。当 `/home` 内容丢失时，快照是最简单有效的恢复方式。通过定期创建快照和适当的管理，你可以在系统出现问题时迅速恢复重要数据。
+
+# SSH
+1. 查看端口状态： `sudo systemctl status sshd`
+2. start the service: `sudo systemctl start sshd`
+3. Or enable it every time it boost : `sudo systemctl enable sshd`
+4. Otherwise, check your `firewalld`
