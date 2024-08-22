@@ -36,7 +36,7 @@ Vendor ID:                GenuineIntel
 ```
 
 ## Boring Shell screenshot
-![](https://github.com/lshAlgorithm/configure/blob/main/photos/boring.png)
+![shell](https://github.com/lshAlgorithm/configure/blob/main/photos/boring.png)
 
 
 # Tips

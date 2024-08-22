@@ -1,2 +1,2 @@
 # Outcomes
-![](https://github.com/lshAlgorithm/configure/blob/main/photos/exp02.png)
+![exp02](https://github.com/lshAlgorithm/configure/blob/main/photos/exp02.png)
