@@ -35,8 +35,8 @@ Vendor ID:                GenuineIntel
     BogoMIPS:             5222.40
 ```
 
-## Boring CLI screenshot
-![](../photos/Screenshot from 2024-08-21 23-14-06.png)
+## Boring Shell screenshot
+![](https://github.com/lshAlgorithm/configure/blob/main/photos/boring.png)
 
 
 # Tips
