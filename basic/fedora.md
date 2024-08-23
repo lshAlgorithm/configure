@@ -81,6 +81,13 @@ then refer to the details link
    nvidia-smi #check it!!!
    ```
 
+## The upgrade of Nvidia Driver
+1. ban the GUI: `sudo systemctl stop gdm`
+2. enter tty: Type `Ctrl`+`Alt`+`F5`
+3. close the graph: `export DISPLAY=:0`
+4. run the `.run`: `./<path-to-file>/NVIDIA-<version>.run`
+5. `nvidia-smi` to check!
+
 # VS code
 * [Download vscode](https://code.visualstudio.com/docs/setup/linux)
 ```powershell
