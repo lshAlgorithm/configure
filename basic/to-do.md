@@ -115,7 +115,16 @@ sudo btrfs subvolume delete /path/to/snapshot
 Btrfs 的快照功能为数据备份和恢复提供了强大的支持。当 `/home` 内容丢失时，快照是最简单有效的恢复方式。通过定期创建快照和适当的管理，你可以在系统出现问题时迅速恢复重要数据。
 
 # SSH
+## concepts
+* 认证阶段：当你尝试连接到一个远程服务器时，你的SSH客户端会使用你的私钥（如id_rsa或id_ed25519）来生成一个签名。这个签名会被发送到服务器进行验证。
+* 密钥交换：一旦身份验证成功，SSH会执行密钥交换过程，以创建一个临时的、对称的会话密钥，用于加密后续的通信。这一过程确保即使有人截获了你的网络流量，也无法读取你的数据。
+* 数据传输：所有后续的数据传输都会使用这个会话密钥进行加密，保证了数据的安全性和完整性。
+
+## check if sshd is running
 1. 查看端口状态： `sudo systemctl status sshd`
 2. start the service: `sudo systemctl start sshd`
 3. Or enable it every time it boost : `sudo systemctl enable sshd`
 4. Otherwise, check your `firewalld`
+
+## check your username
+## Then follow [this](https://github.com/lshAlgorithm/SHU-Computer-Architecture-Experiments/blob/main/docs/Exp03-Tutor.md#42-ssh-key-generation)
