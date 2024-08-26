@@ -3,7 +3,12 @@ Follow the instrcutions in `./fedora.md` to utilize the nvidia driver.
 Check Through `nvidia-smi`
 
 # Install CUDA Toolkit
+> ![Note]
+>
+> You need to check the version you want. Or you may get `the provided PTX was compiled with an unsupported toolchain`. (Don't worry, remove through `dnf` and download again in the official site)
+> More technical concepts check in [compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/index.html), and [CUDA API]() (driver)
 1. Download CUDA Toolkit from NVIDIA's website:[here](https://developer.nvidia.com/cuda-downloads)
+   * !! CHECK YOUR VERSION OF CUDA using `nvidia-smi`, the toolkit should be in the **exact** same version(check through `nvcc --version`)
    * You can check the document [here](https://developer.nvidia.com/cuda-toolkit-archive)
 2. Follow the installation instructions for your system.
 3. Add the path to the environment variable in `~/.bashrc`: `export PATH=/usr/local/cuda-11.0/bin:$PATH`. Remeber to `source ~/.bashrc`.
@@ -20,6 +25,7 @@ Check Through `nvidia-smi`
    * `--prefix` specifies the installation directory.
    * `--enable-languages` specifies the languages to be compiled. You can add `Fortran`
 4. `make -j $(nproc) all`
+   * You may encounter some dependency problem like `missing gmp`, you can check the package in `dnf` through `dnf search [package name]` or `dnf list [package name]`. You may find out the missing `gmp` calls for package `gmp-devel`  :)
 5. `make install`
 6. Add the path to the environment variable in different ways:
    * `export PATH=/usr/local/gcc-10.2.0/bin:$PATH`, it will replace the version installed before with your own.
