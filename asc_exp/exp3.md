@@ -8,7 +8,7 @@ Hello, I am rank 5
 Hello, I am rank 3
 Hello, I am rank 2
 ```
-![](https://github.com/lshAlgorithm/configure/blob/main/photos/openmpi.png)
+![openmpi](../photos/openmpi.png)
 
 # Use gnome boxes
 1. as normal, do what UI says

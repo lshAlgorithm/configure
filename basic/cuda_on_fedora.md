@@ -6,7 +6,7 @@ Check Through `nvidia-smi`
 > ![Note]
 >
 > You need to check the version you want. Or you may get `the provided PTX was compiled with an unsupported toolchain`. (Don't worry, remove through `dnf` and download again in the official site)
-> More technical concepts check in [compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/index.html), and [CUDA API]() (driver)
+> More technical concepts check in [compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/index.html), and [CUDA API](https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi), two driver APIs.
 1. Download CUDA Toolkit from NVIDIA's website:[here](https://developer.nvidia.com/cuda-downloads)
    * !! CHECK YOUR VERSION OF CUDA using `nvidia-smi`, the toolkit should be in the **exact** same version(check through `nvcc --version`)
    * You can check the document [here](https://developer.nvidia.com/cuda-toolkit-archive)
@@ -37,3 +37,7 @@ Check Through `nvidia-smi`
         ```
         `source` and Type `GCC13_INIT` to activate the environment.
     * You can specify it when compiling the `.cu` with `CC=/usr/local/gcc-10.2.0/bin/gcc-10.2.0 CXX=/usr/local/gcc-10.2.0/bin/g++-10.2.0` in the terminal.
+
+# The Frame Drop problem on Fedora
+* No exact reason detected.
+* Solved by `dnf upgrade`, not upgrade the system.

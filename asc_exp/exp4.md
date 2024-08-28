@@ -36,8 +36,7 @@ Vendor ID:                GenuineIntel
 ```
 
 ## Boring Shell screenshot
-![shell](https://github.com/lshAlgorithm/configure/blob/main/photos/boring.png)
-
+![shell](../photos/boring.png)
 
 # Tips
 1. Remember to `git stash` to restore the modification
