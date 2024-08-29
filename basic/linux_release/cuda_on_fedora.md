@@ -41,3 +41,6 @@ Check Through `nvidia-smi`
 # The Frame Drop problem on Fedora
 * No exact reason detected.
 * Solved by `dnf upgrade`, not upgrade the system.
+
+# cuDNN
+It seems that Fedora doesn't support cuDNN. Official support [here](https://developer.nvidia.com/cudnn-downloads)

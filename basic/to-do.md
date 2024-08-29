@@ -128,3 +128,7 @@ Btrfs 的快照功能为数据备份和恢复提供了强大的支持。当 `/ho
 
 ## check your username
 ## Then follow [this](https://github.com/lshAlgorithm/SHU-Computer-Architecture-Experiments/blob/main/docs/Exp03-Tutor.md#42-ssh-key-generation)
+
+
+# Rocky9 VM
+[refer](https://computingforgeeks.com/install-use-kvm-virtualization-on-rocky/)
