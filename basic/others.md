@@ -121,3 +121,5 @@ Btrfs 的快照功能为数据备份和恢复提供了强大的支持。当 `/ho
 3. `git branch -m [NewName]` change the name of the current branch
 4. `git branch -d [branchName]` delete the branch that has been merged
 5. `git push origin -d [branchName]` delete the branch in remote repo.
+
+# To-dos

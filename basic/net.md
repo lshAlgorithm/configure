@@ -38,3 +38,9 @@
 
 ## check your username
 ## Then follow [this](https://github.com/lshAlgorithm/SHU-Computer-Architecture-Experiments/blob/main/docs/Exp03-Tutor.md#42-ssh-key-generation)
+### Notice
+1. if you are on a server, then use thess two steps to set the ssh-agent.
+    ```
+    eval $(ssh-agent -s)
+    ssh-add /path/to/your/id_rsa
+    ```

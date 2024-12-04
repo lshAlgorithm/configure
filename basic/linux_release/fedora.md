@@ -208,6 +208,18 @@ True
 tensor([1., 2.], device='cuda:0')
 >>> exit()
 ```
+# CMD 
+1. multiplexer: alacritty + zellij(both in rust, you can personalize it)
+2. modify the shell to look concise, add the below to the `~/.bashrc`
+    ```
+    color_prompt=yes
+
+    if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
+    fi
+    ```
 
 # Extension
 * Time-zone problem: use `timedatectl set-local-rtc 1 --adjust-system-clock` to replace default `UTC`(universal time) with local time.
@@ -215,5 +227,4 @@ tensor([1., 2.], device='cuda:0')
 * hide the top-bar: [gnome extension](https://extensions.gnome.org/extension/545/hide-top-bar/)
 * LibreOffice: `sudo dnf install LibreOffice`, to have ps-like, word-like, excel-like software
 * Stacer: `sudo dnf install stacer`, to have monitor on your device
-
-
+* TLP: save battery life
