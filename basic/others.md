@@ -1,4 +1,15 @@
 # Mount
+
+## 在WSL中挂在Linux分区
+> Prerequisite: WSL2
+### In powershell
+1. check your target disk:`wmic diskdrive list brief`
+2. mount it to wsl: `wsl --mount \\.\PHYSICALDRIVE1 --bare`
+### In WSL
+1. the disk is visible: `lsblk`
+2. mount it to certain directory: `sudo mount /dev/sda1 /mnt/mydisk`
+
+## 在Linux中挂在Windows分区
 要在 Fedora 中挂载 Windows 分区，你需要遵循以下步骤。这里假设你的 Windows 分区使用的是 NTFS 文件系统，这是 Windows 最常用的文件系统类型。
 步骤 1：确定 Windows 分区
 
